@@ -6,9 +6,10 @@
 }
 
 .gitHubLogo {
-    height: 92vh;
+    height: 80vh;
     position: absolute;
     left: 0;
+    top: 70px;
 }
 
 .informacoes {
@@ -23,7 +24,7 @@ input {
     border-radius: 22px;
     min-width: 250px;
     margin-right: 12px;
-    width: 85%;
+    width: 84%;
     background:transparent;
     font-size: 18px;
     padding: 10px;
@@ -93,6 +94,9 @@ button:active {
     margin: 20px 0 0 0;
 }
 
-hr {
-
+.repositorio {
+    font-size: 24px;
+    color: white;
+    margin: 10px 0;
+    text-align: center;
 }
