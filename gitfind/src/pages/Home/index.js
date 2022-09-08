@@ -7,7 +7,7 @@ import "./styles.css"
 
 function App() {
   const [user, setUser] = useState('');
-  const [currentUser, setcurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
   const [repos, setRepos] = useState(null);
 
   const handleGetData = async () => {
@@ -18,7 +18,7 @@ function App() {
 
     if(newUser.name) {
       const {avatar_url, name, bio} = newUser;
-      setcurrentUser({avatar_url, name, bio});
+      setCurrentUser({avatar_url, name, bio});
 
       const reposData = await fetch(`https://api.github.com/users/${user}/repos`);
       const newRepos = await reposData.json();
