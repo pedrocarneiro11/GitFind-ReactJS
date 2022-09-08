@@ -19,11 +19,11 @@
 }
 
 input {
-    border: 1px solid #2D333B; 
+    border: 1px solid #35393f; 
     border-radius: 22px;
     min-width: 250px;
     margin-right: 12px;
-    width: 80%;
+    width: 85%;
     background:transparent;
     font-size: 18px;
     padding: 10px;
@@ -55,8 +55,44 @@ button:hover {
     cursor: pointer;
     background: white;
     color: #090909;
+    transition: all .6s ease;
 }
 
 button:active {
     scale:  90%;
+}
+
+.perfil {
+    display: flex;
+    margin : 40px;
+}
+
+.profile {
+    border-radius: 64px;
+    width: 128px;
+    height: 128px;
+    border: 2px solid white;
+    margin-right: 32px;
+}
+
+.perfil h3 {
+    color: #999999;
+    font-size: 24px;
+    margin: 0;
+}
+
+.perfil span {
+    color: #999999;
+    font-size: 14px;
+    margin: 0;
+}
+
+.perfil p {
+    color: white;
+    font-size: 16px;
+    margin: 20px 0 0 0;
+}
+
+hr {
+
 }

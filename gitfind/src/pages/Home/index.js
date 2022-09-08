@@ -14,6 +14,15 @@ function App() {
             <input name="usuario" placeholder="@username"></input>
             <button>Buscar</button>
           </div>
+          <div className="perfil">
+            <img src="https://avatars.githubusercontent.com/u/42221151?s=400&u=fb0410100372e5ade9b81b772e5087a528fcb5a6&v=4" className="profile" alt="perfil"></img>
+            <div>
+              <h3>Pedro Carneiro</h3>
+              <span>@pedrocarneiro11</span>
+              <p>Descricao</p>
+            </div>
+          </div>
+          <hr></hr>
         </div>
       </div>
     </div>
