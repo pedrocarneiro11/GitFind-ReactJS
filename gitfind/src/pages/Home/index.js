@@ -17,11 +17,13 @@ function App() {
     console.log (newUser);
 
     if(newUser.name) {
-      const {avatar_url, name, bio} = newUser;
-      setCurrentUser({avatar_url, name, bio});
+      const {avatar_url, name, bio, login} = newUser;
+      setCurrentUser({avatar_url, name, bio, login});
 
       const reposData = await fetch(`https://api.github.com/users/${user}/repos`);
       const newRepos = await reposData.json();
+
+      console.log(newRepos);
 
       if(newRepos.length){
         setRepos(newRepos);
@@ -46,22 +48,27 @@ function App() {
             <button onClick={handleGetData}>Buscar</button>
 
           </div>
-          
-          <div className="perfil">
-            <img src="https://avatars.githubusercontent.com/u/42221151?s=400&u=fb0410100372e5ade9b81b772e5087a528fcb5a6&v=4" className="profile" alt="perfil"></img>
+          {currentUser?.name ? (<>
+            <div className="perfil">
+            <img src={currentUser.avatar_url} className="profile" alt="perfil"></img>
             <div>
-              <h3>Pedro Carneiro</h3>
-              <span>@pedrocarneiro11</span>
-              <p>Descricao</p>
+              <h3>{currentUser.name}</h3>
+              <span>@{currentUser.login}</span>
+              <p>{currentUser.bio}</p>
             </div>
           </div>
           <hr></hr>
+          </>
+          ): null}
+          {repos?.length ? (          
           <div>
             <h4 className='repositorio'>Repositórios</h4>
-            <ItemList title="Teste1" description="teste de descricao"></ItemList>
-            <ItemList title="Teste1" description="teste de descricao"></ItemList>
-            <ItemList title="Teste1" description="teste de descricao"></ItemList>
+            {repos.map(repo => (<>
+              <ItemList title={repo.name} description={repo.description}></ItemList>
+              </>
+            ))}
           </div>
+          ) : null}
         </div>
       </div>
     </div>
