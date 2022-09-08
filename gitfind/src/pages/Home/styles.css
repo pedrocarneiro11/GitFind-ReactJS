@@ -1,0 +1,62 @@
+.conteudo {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.gitHubLogo {
+    height: 92vh;
+    position: absolute;
+    left: 0;
+}
+
+.informacoes {
+    width: 60%;
+    margin-right: 90px;
+    margin-top: 40px;
+    color: white;
+}
+
+input {
+    border: 1px solid #2D333B; 
+    border-radius: 22px;
+    min-width: 250px;
+    margin-right: 12px;
+    width: 80%;
+    background:transparent;
+    font-size: 18px;
+    padding: 10px;
+    text-decoration: white;
+}
+
+input, select, textarea{
+    color: white;
+}
+
+textarea:focus, input:focus {
+    color: white;
+}
+
+button {
+    border: 1px solid #999999;
+    border-radius: 22px;
+    min-width: 10px;
+    margin-right: 12px;
+    width: 10%; 
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    
+}
+
+button:hover {
+    cursor: pointer;
+    background: white;
+    color: #090909;
+}
+
+button:active {
+    scale:  90%;
+}
